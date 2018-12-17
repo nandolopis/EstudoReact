@@ -5,7 +5,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 //module.exports faz com que o conteúdo passa ser visível fora do modulo 
 module.exports = {
     //modulo de entrada para o projeto
-    entry: './ex/index.jsx', 
+    //entry: './ExerciciosWebPack/ex/index.jsx',
+    entry: './ex/index.js', 
     //onde gerará a saída .js
     output: {
         parh: __dirname + '/public',
