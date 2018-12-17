@@ -14,11 +14,12 @@ module.exports = {
         port: 8080,
         contentBase: './public' //pasta do webpack
     },
+    //modulos
     module: {
         loaders: [{
             test: /.jsx?$/, //expressão para sabe qual arquivo jsx própria do react
-            loader: 'babel-loader',
-            exclude: /node_modules/,
+            loader: 'babel-loader', //loader para o babel
+            exclude: /node_modules/, // para babel carregar somento o js da aplicação
             query:{
                 presets: ['es2015', 'react']
             }
