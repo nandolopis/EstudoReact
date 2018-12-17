@@ -21,7 +21,8 @@ module.exports = {
             loader: 'babel-loader', //loader para o babel
             exclude: /node_modules/, // para babel carregar somento o js da aplicação
             query:{
-                presets: ['es2015', 'react']
+                presets: ['es2015', 'react'],
+                plugins:['transform-object-rest-spread']
             }
         }]
     }
