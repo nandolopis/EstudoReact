@@ -1,4 +1,6 @@
 const webpack = require('webpack')
+//css
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 //module.exports faz com que o conteúdo passa ser visível fora do modulo 
 module.exports = {
@@ -14,6 +16,10 @@ module.exports = {
         port: 8080,
         contentBase: './public' //pasta do webpack
     },
+    //plugin
+    plugins:[
+        new ExtractTextPlugin('app.css')
+    ],
     //modulos
     module: {
         loaders: [{
@@ -24,6 +30,10 @@ module.exports = {
                 presets: ['es2015', 'react'],
                 plugins:['transform-object-rest-spread']
             }
+        },{
+            test: /\.css$/,
+            loader: ExtractTextPlugin.extract("style-loader","css-loader")
+
         }]
     }
 }
