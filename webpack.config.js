@@ -6,7 +6,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 module.exports = {
     //modulo de entrada para o projeto
     //entry: './ExerciciosWebPack/ex/index.jsx',
-    entry: './ex/index.js', 
+    entry: './ex/index.jsx', 
     //onde gerará a saída .js
     output: {
         parh: __dirname + '/public',
